@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barisha V M — Erasmus Mundus Scholarship Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #1A1A2E;
+  --forest: #1B4332;
+  --forest2: #2D6A4F;
+  --forest3: #52B788;
+  --gold: #B8962E;
+  --gold2: #D4AF37;
+  --cream: #FDFBF7;
+  --warm: #F5F0E8;
+  --border: rgba(27,67,50,0.12);
+  --muted: #6B7280;
+  --accent: #0F4C75;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden;font-size:15px}
+@media print{body{font-size:11px}.no-print{display:none!important}section{page-break-inside:avoid}}
+
+/* ── COVER PAGE ── */
+.cover{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden}
+.cover-left{background:var(--forest);padding:5rem 4rem;display:flex;flex-direction:column;justify-content:space-between;position:relative}
+.cover-left::after{content:'';position:absolute;bottom:0;right:-60px;width:120px;height:100%;background:var(--forest);clip-path:polygon(0 0,0 100%,100% 100%)}
+.cover-right{background:var(--cream);padding:5rem 4rem 5rem 6rem;display:flex;flex-direction:column;justify-content:center;position:relative}
+.cover-right::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231B4332' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
+.cover-label{font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.45);font-weight:500;margin-bottom:0.5rem}
+.cover-doc-type{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:rgba(255,255,255,0.7);font-style:italic;margin-bottom:4rem;letter-spacing:0.04em}
+.cover-name{font-family:'Cormorant Garamond',serif;font-size:3.5rem;color:#fff;line-height:1.05;font-weight:300;margin-bottom:0.75rem;letter-spacing:-0.02em}
+.cover-title{font-size:0.8rem;color:rgba(255,255,255,0.6);line-height:1.7;max-width:280px;margin-bottom:3rem}
+.cover-divider{width:40px;height:1px;background:var(--gold2);margin-bottom:3rem}
+.cover-stats{display:flex;flex-direction:column;gap:1.5rem}
+.cover-stat-label{font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:0.15rem}
+.cover-stat-val{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:#fff;font-weight:400}
+.cover-bottom{display:flex;align-items:center;gap:1rem}
+.cover-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:4px;padding:0.4rem 0.8rem;font-size:0.68rem;color:rgba(255,255,255,0.6);letter-spacing:0.06em}
+.cover-right-label{font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;font-weight:600}
+.cover-statement{font-family:'Cormorant Garamond',serif;font-size:2.6rem;line-height:1.2;color:var(--ink);font-weight:300;margin-bottom:2rem;letter-spacing:-0.01em}
+.cover-statement em{color:var(--forest);font-style:italic}
+.cover-intro{font-size:0.88rem;color:var(--muted);line-height:1.85;margin-bottom:2.5rem;max-width:420px}
+.cover-targets{display:flex;flex-wrap:wrap;gap:0.5rem}
+.target-chip{font-size:0.68rem;padding:0.3rem 0.75rem;border-radius:3px;background:rgba(27,67,50,0.07);color:var(--forest);font-weight:600;letter-spacing:0.04em;border:1px solid rgba(27,67,50,0.12)}
+.cover-year{font-family:'Cormorant Garamond',serif;font-size:5rem;color:rgba(27,67,50,0.05);position:absolute;bottom:2rem;right:3rem;font-weight:300;letter-spacing:-0.04em;line-height:1}
+
+/* ── NAV ── */
+.sticky-nav{position:sticky;top:0;z-index:50;background:rgba(253,251,247,0.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0.75rem 4rem;display:flex;align-items:center;justify-content:space-between}
+.sticky-nav-name{font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--forest);letter-spacing:0.02em}
+.sticky-nav-links{display:flex;gap:1.75rem}
+.sticky-nav-links a{font-size:0.72rem;letter-spacing:0.07em;text-transform:uppercase;color:var(--muted);text-decoration:none;font-weight:500;transition:color .2s}
+.sticky-nav-links a:hover{color:var(--forest)}
+.print-btn{font-size:0.72rem;padding:0.38rem 1rem;border-radius:3px;background:var(--forest);color:#fff;border:none;cursor:pointer;letter-spacing:0.06em;font-weight:500}
+
+/* ── SECTIONS ── */
+.page-section{padding:6rem 4rem;max-width:1100px;margin:0 auto}
+.section-eyebrow{display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem}
+.eyebrow-num{font-family:'Cormorant Garamond',serif;font-size:0.9rem;color:var(--gold);font-style:italic}
+.eyebrow-text{font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.section-rule{width:100%;height:1px;background:var(--border);margin-bottom:4rem}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3vw,3rem);color:var(--ink);font-weight:300;line-height:1.15;margin-bottom:1.25rem;letter-spacing:-0.02em}
+.section-title em{color:var(--forest);font-style:italic}
+.section-lead{font-size:0.97rem;color:var(--muted);line-height:1.9;max-width:680px;margin-bottom:3.5rem}
+.divider-gold{width:48px;height:2px;background:linear-gradient(to right,var(--gold),var(--gold2));margin-bottom:3rem}
+
+/* ── ORIGIN STORY ── */
+.origin-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:5rem;align-items:start}
+.origin-year-block{position:relative;padding-left:1.5rem;border-left:2px solid var(--gold)}
+.origin-year{font-family:'Cormorant Garamond',serif;font-size:3rem;color:var(--forest);font-weight:300;line-height:1;display:block;margin-bottom:0.25rem}
+.origin-subtitle{font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:2rem}
+.origin-pullquote{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--ink);line-height:1.55;font-style:italic;font-weight:300;margin-bottom:2rem;padding:1.5rem;background:var(--warm);border-left:3px solid var(--forest);border-radius:0 8px 8px 0}
+.origin-body p{font-size:0.93rem;color:#374151;line-height:1.95;margin-bottom:1.25rem}
+.origin-body p strong{color:var(--forest);font-weight:600}
+.activities-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin-top:1.5rem}
+.activity-item{display:flex;align-items:center;gap:0.6rem;font-size:0.8rem;color:var(--muted);padding:0.35rem 0}
+.activity-dot{width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0}
+
+/* ── TRANSFORMATION ── */
+.transform-timeline{position:relative;padding:0}
+.transform-line{position:absolute;left:1.5rem;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,var(--gold),var(--forest3),rgba(27,67,50,0.1))}
+.transform-item{display:flex;gap:3rem;margin-bottom:3.5rem;padding-left:5rem;position:relative}
+.transform-dot{position:absolute;left:1.1rem;top:0.35rem;width:10px;height:10px;border-radius:50%;background:var(--gold);border:2px solid var(--cream)}
+.transform-year-col{flex-shrink:0;width:60px}
+.transform-year{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--gold);font-weight:400}
+.transform-content h3{font-family:'Space Grotesk',sans-serif;font-size:0.95rem;font-weight:600;color:var(--ink);margin-bottom:0.4rem}
+.transform-content p{font-size:0.85rem;color:var(--muted);line-height:1.75}
+.transform-content .significance{font-size:0.75rem;color:var(--forest);font-weight:500;margin-top:0.4rem;font-style:italic}
+
+/* ── RESEARCH PHILOSOPHY ── */
+.philosophy-grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:5rem}
+.philosophy-body p{font-size:0.93rem;color:#374151;line-height:1.95;margin-bottom:1.25rem}
+.philosophy-body p strong{color:var(--forest);font-weight:600}
+.philosophy-pillars{display:flex;flex-direction:column;gap:1.25rem}
+.pillar-card{background:var(--warm);border:1px solid var(--border);border-radius:8px;padding:1.5rem}
+.pillar-num{font-family:'Cormorant Garamond',serif;font-size:2rem;color:rgba(27,67,50,0.15);font-weight:300;line-height:1;margin-bottom:0.5rem}
+.pillar-card h4{font-family:'Space Grotesk',sans-serif;font-size:0.85rem;font-weight:600;color:var(--ink);margin-bottom:0.4rem}
+.pillar-card p{font-size:0.8rem;color:var(--muted);line-height:1.6}
+
+/* ── RESEARCH CARDS ── */
+.research-item{border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:2rem;background:#fff}
+.research-item-header{padding:2rem 2.5rem 1.25rem;border-bottom:1px solid var(--border);background:var(--warm)}
+.research-item-type{font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:0.5rem}
+.research-item-title{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--ink);font-weight:400;margin-bottom:0.5rem;line-height:1.3}
+.research-item-meta{font-size:0.75rem;color:var(--muted);font-family:'Space Grotesk',sans-serif}
+.research-item-body{padding:2rem 2.5rem}
+.research-item-body p{font-size:0.88rem;color:#374151;line-height:1.85;margin-bottom:1.1rem}
+.research-item-body p strong{color:var(--forest);font-weight:600}
+.research-contribution{background:rgba(27,67,50,0.04);border-left:3px solid var(--forest);padding:1rem 1.25rem;border-radius:0 6px 6px 0;margin-top:1.25rem}
+.research-contribution-label{font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--forest);font-weight:600;margin-bottom:0.35rem}
+.research-contribution p{font-size:0.83rem;color:#374151;line-height:1.7;margin:0}
+.research-tags{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:1.25rem}
+.r-tag{font-size:0.7rem;padding:0.25rem 0.65rem;border-radius:3px;background:rgba(27,67,50,0.06);color:var(--forest);font-weight:500}
+
+/* ── PROJECTS ── */
+.project-block{display:grid;grid-template-columns:0.85fr 1.15fr;gap:4rem;margin-bottom:4rem;padding-bottom:4rem;border-bottom:1px solid var(--border)}
+.project-block:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.project-left-num{font-family:'Cormorant Garamond',serif;font-size:4rem;color:rgba(27,67,50,0.07);font-weight:300;line-height:1;margin-bottom:1rem}
+.project-left h3{font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--ink);font-weight:400;margin-bottom:0.5rem}
+.project-left .url{font-size:0.75rem;color:var(--forest);font-family:'Space Grotesk',sans-serif;margin-bottom:1rem;word-break:break-all}
+.project-left .stack{display:flex;flex-wrap:wrap;gap:0.35rem;margin-bottom:1.25rem}
+.stack-tag{font-size:0.68rem;padding:0.22rem 0.6rem;border-radius:3px;background:var(--warm);color:var(--ink);font-weight:500;border:1px solid var(--border)}
+.project-left .sdg-list{display:flex;flex-direction:column;gap:0.3rem}
+.sdg-line{font-size:0.75rem;color:var(--forest);font-weight:500;display:flex;align-items:center;gap:0.4rem}
+.sdg-line::before{content:'▸';font-size:0.6rem}
+.project-right p{font-size:0.9rem;color:#374151;line-height:1.9;margin-bottom:1rem}
+.project-right p strong{color:var(--forest);font-weight:600}
+.project-significance{background:var(--warm);border-radius:8px;padding:1.25rem 1.5rem;margin-top:1.25rem;border:1px solid var(--border)}
+.project-significance-label{font-size:0.63rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:0.35rem}
+.project-significance p{font-size:0.82rem;color:#374151;line-height:1.7;margin:0}
+
+/* ── LEADERSHIP ── */
+.leadership-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.leadership-item{background:#fff;border:1px solid var(--border);border-radius:10px;padding:2rem;position:relative;overflow:hidden;transition:border-color .25s}
+.leadership-item:hover{border-color:var(--forest3)}
+.leadership-item::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:linear-gradient(to bottom,var(--gold),var(--forest3))}
+.leadership-item-year{font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:0.75rem}
+.leadership-item h3{font-family:'Cormorant Garamond',serif;font-size:1.25rem;color:var(--ink);font-weight:400;margin-bottom:0.35rem}
+.leadership-item .org{font-size:0.78rem;color:var(--muted);margin-bottom:1rem}
+.leadership-item p{font-size:0.83rem;color:#4B5563;line-height:1.7}
+.leadership-item .relevance{font-size:0.75rem;color:var(--forest);font-style:italic;margin-top:0.75rem;font-weight:500}
+
+/* ── PROGRAMME ALIGNMENT ── */
+.programme-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.5rem;margin-bottom:3rem}
+.prog-card{background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.75rem;transition:all .25s}
+.prog-card:hover{border-color:var(--forest3);transform:translateY(-2px)}
+.prog-name{font-family:'Space Grotesk',sans-serif;font-size:0.9rem;font-weight:600;color:var(--forest);margin-bottom:0.25rem}
+.prog-full{font-size:0.75rem;color:var(--muted);margin-bottom:1rem;line-height:1.4}
+.prog-match{display:flex;flex-direction:column;gap:0.35rem}
+.prog-match-item{font-size:0.78rem;color:#4B5563;display:flex;align-items:flex-start;gap:0.4rem;line-height:1.5}
+.prog-match-item::before{content:'✓';color:var(--forest);font-weight:700;font-size:0.7rem;margin-top:0.15rem;flex-shrink:0}
+.alignment-table{width:100%;border-collapse:collapse;margin-top:2rem}
+.alignment-table th{font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);font-weight:600;padding:0.75rem 1rem;text-align:left;border-bottom:2px solid var(--border);background:var(--warm)}
+.alignment-table td{font-size:0.82rem;color:#4B5563;padding:0.9rem 1rem;border-bottom:1px solid var(--border);line-height:1.5;vertical-align:top}
+.alignment-table td:first-child{font-weight:600;color:var(--ink);white-space:nowrap}
+.match-strong{display:inline-flex;align-items:center;gap:0.3rem;font-size:0.72rem;font-weight:600;color:var(--forest);background:rgba(27,67,50,0.07);padding:0.15rem 0.5rem;border-radius:3px}
+
+/* ── CAREER VISION ── */
+.vision-flow{display:flex;flex-direction:column;gap:0;max-width:650px;margin:0 auto}
+.vision-step{display:flex;gap:2rem;align-items:flex-start;padding:1.5rem 0;position:relative}
+.vision-step-connector{display:flex;flex-direction:column;align-items:center;gap:0;flex-shrink:0;width:40px}
+.vision-step-dot{width:14px;height:14px;border-radius:50%;background:var(--forest);border:3px solid var(--cream);box-shadow:0 0 0 2px var(--forest);flex-shrink:0}
+.vision-step-line{width:1px;flex:1;background:linear-gradient(to bottom,var(--forest),var(--forest3));min-height:48px}
+.vision-step:last-child .vision-step-line{display:none}
+.vision-step-content{flex:1;padding-top:0}
+.vision-step-label{font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:0.3rem}
+.vision-step-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--ink);font-weight:400;margin-bottom:0.35rem}
+.vision-step-desc{font-size:0.82rem;color:var(--muted);line-height:1.65}
+.vision-goal{background:var(--forest);color:#fff;border-radius:10px;padding:3rem 3.5rem;margin-top:3rem;text-align:center}
+.vision-goal-label{font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:1rem}
+.vision-goal-text{font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:#fff;font-weight:300;line-height:1.4;font-style:italic}
+.vision-goal-text em{color:#D4AF37}
+
+/* ── WHY ERASMUS ── */
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem}
+.why-body p{font-size:0.92rem;color:#374151;line-height:1.95;margin-bottom:1.25rem}
+.why-body p strong{color:var(--forest);font-weight:600}
+.why-reasons{display:flex;flex-direction:column;gap:1.25rem}
+.why-reason{background:var(--warm);border-radius:8px;padding:1.25rem 1.5rem;border:1px solid var(--border)}
+.why-reason-num{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--gold);font-weight:300;margin-bottom:0.25rem}
+.why-reason h4{font-family:'Space Grotesk',sans-serif;font-size:0.85rem;font-weight:600;color:var(--ink);margin-bottom:0.35rem}
+.why-reason p{font-size:0.8rem;color:var(--muted);line-height:1.6;margin:0}
+
+/* ── FUTURE RESEARCH ── */
+.future-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.5rem}
+.future-card{background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.75rem;transition:all .25s}
+.future-card:hover{border-color:var(--forest3)}
+.future-icon{font-size:1.5rem;margin-bottom:1rem}
+.future-card h4{font-family:'Space Grotesk',sans-serif;font-size:0.88rem;font-weight:600;color:var(--ink);margin-bottom:0.5rem}
+.future-card p{font-size:0.8rem;color:var(--muted);line-height:1.65}
+
+/* ── GLOBAL VISION ── */
+.global-statement{font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--ink);font-weight:300;line-height:1.45;max-width:780px;margin:0 auto 4rem;text-align:center;font-style:italic}
+.global-statement em{color:var(--forest)}
+.orgs-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:3rem}
+.org-chip{background:var(--warm);border:1px solid var(--border);border-radius:8px;padding:1rem;text-align:center;transition:all .2s}
+.org-chip:hover{border-color:var(--forest3)}
+.org-chip-icon{font-size:1.3rem;margin-bottom:0.4rem}
+.org-chip h5{font-family:'Space Grotesk',sans-serif;font-size:0.8rem;font-weight:600;color:var(--ink);margin-bottom:0.2rem}
+.org-chip p{font-size:0.7rem;color:var(--muted);line-height:1.4}
+.closing-note{background:var(--forest);color:#fff;border-radius:12px;padding:3rem 4rem;text-align:center}
+.closing-note p{font-family:'Cormorant Garamond',serif;font-size:1.25rem;color:rgba(255,255,255,0.9);line-height:1.8;font-style:italic;font-weight:300;max-width:700px;margin:0 auto 1.5rem}
+.closing-sig{font-size:0.8rem;color:rgba(255,255,255,0.5);letter-spacing:0.06em}
+.closing-sig strong{color:rgba(255,255,255,0.8);font-weight:500}
+
+/* ── SECTION DIVIDERS ── */
+.section-sep{border:none;height:1px;background:var(--border);margin:0 4rem}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .cover{grid-template-columns:1fr}
+  .cover-left{min-height:60vh}
+  .cover-right{padding:3rem 2.5rem}
+  .origin-grid,.philosophy-grid,.why-grid{grid-template-columns:1fr}
+  .project-block{grid-template-columns:1fr}
+  .leadership-grid,.programme-grid,.future-grid,.orgs-grid{grid-template-columns:1fr 1fr}
+  .page-section{padding:4rem 2rem}
+  .sticky-nav{padding:0.75rem 2rem}
+}
+@media(max-width:600px){.leadership-grid,.programme-grid,.future-grid,.orgs-grid{grid-template-columns:1fr}.cover-name{font-size:2.5rem}}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════ COVER ═══════════════ -->
+<div class="cover" id="home">
+  <div class="cover-left">
+    <div>
+      <div class="cover-label">Erasmus Mundus Scholarship Portfolio</div>
+      <div class="cover-doc-type">Academic &amp; Professional Dossier</div>
+    </div>
+    <div>
+      <div class="cover-name">Barisha<br>V M</div>
+      <div class="cover-divider"></div>
+      <div class="cover-title">AI &amp; Data Science Graduate · Sustainability Researcher · Environmental Governance · International Development</div>
+      <div class="cover-stats">
+        <div>
+          <div class="cover-stat-label">Academic Achievement</div>
+          <div class="cover-stat-val">GPA 8.43 / 10 — B.Tech AI &amp; Data Science</div>
+        </div>
+        <div>
+          <div class="cover-stat-label">Recognition</div>
+          <div class="cover-stat-val">Young Scientist Award · KAP, 2018</div>
+        </div>
+        <div>
+          <div class="cover-stat-label">Research</div>
+          <div class="cover-stat-val">Patent Filed & Published · Research Published · 2 Live Platforms</div>
+        </div>
+        <div>
+          <div class="cover-stat-label">Contact</div>
+          <div class="cover-stat-val">barishavm29@gmail.com · Nagercoil, TN, India</div>
+        </div>
+      </div>
+    </div>
+    <div class="cover-bottom">
+      <div class="cover-badge">📅 2026 Intake</div>
+      <div class="cover-badge">🌍 International Development</div>
+    </div>
+  </div>
+  <div class="cover-right">
+    <div>
+      <div class="cover-right-label">A Decade in the Making</div>
+      <div class="cover-statement">
+        Sustainability is not<br>my career pivot.<br>It is my <em>origin story.</em>
+      </div>
+      <div class="cover-intro">
+        This portfolio documents a decade-long, authentic commitment to environmental science, sustainability governance, and international development — beginning on the coastlines of Kanyakumari in 2017 and extending to peer-reviewed research, patent-filed innovation, and publicly deployed sustainability tools in 2026.
+      </div>
+      <div style="margin-bottom:1rem;font-size:0.72rem;color:var(--muted);letter-spacing:0.06em;font-weight:500;text-transform:uppercase">Target Erasmus Mundus Programmes</div>
+      <div class="cover-targets">
+        <span class="target-chip">MESPOM</span>
+        <span class="target-chip">NOHA</span>
+        <span class="target-chip">MUNDUS MAPP</span>
+        <span class="target-chip">MERGED</span>
+        <span class="target-chip">CCD-STeDe</span>
+        <span class="target-chip">TISE</span>
+      </div>
+      <div class="cover-year">2026</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ NAV ═══════════════ -->
+<nav class="sticky-nav no-print">
+  <div class="sticky-nav-name">Barisha V M — Erasmus Portfolio</div>
+  <div class="sticky-nav-links">
+    <a href="#origin">Origin</a>
+    <a href="#journey">Journey</a>
+    <a href="#philosophy">Research</a>
+    <a href="#publications">Publications</a>
+    <a href="#projects">Projects</a>
+    <a href="#programmes">Alignment</a>
+    <a href="#vision">Vision</a>
+    <a href="#why">Why Erasmus</a>
+  </div>
+  <button class="print-btn" onclick="window.print()">Print / Save PDF</button>
+</nav>
+
+<!-- ═══════════════ 01 — ORIGIN STORY ═══════════════ -->
+<section class="page-section" id="origin">
+  <div class="section-eyebrow">
+    <span class="eyebrow-num">01</span>
+    <span class="eyebrow-text">The Origin Story</span>
+  </div>
+  <div class="section-rule"></div>
+  <h2 class="section-title">How a reluctant schoolgirl became a<br><em>committed sustainability practitioner.</em></h2>
+  <p class="section-lead">The most credible commitments begin not with ambition, but with transformation. This is the story of how a mandatory school programme became a lifelong vocation.</p>
+
+  <div class="origin-grid">
+    <div>
+      <div class="origin-year-block">
+        <span class="origin-year">2017</span>
+        <div class="origin-subtitle">Kumari Arivial Peravai — Young Scientists Programme</div>
+        <div class="origin-pullquote">"I joined only because my parents insisted. The coastline of Kanyakumari changed everything."</div>
+      </div>
+      <div style="margin-top:2rem">
+        <div style="font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:0.75rem">Programme Activities</div>
+        <div class="activities-grid">
+          <div class="activity-item"><div class="activity-dot"></div>Biodiversity Study</div>
+          <div class="activity-item"><div class="activity-dot"></div>Water Body Study</div>
+          <div class="activity-item"><div class="activity-dot"></div>Coastal Study Tour</div>
+          <div class="activity-item"><div class="activity-dot"></div>Nature Study Camp</div>
+          <div class="activity-item"><div class="activity-dot"></div>Environmental Seminars</div>
+          <div class="activity-item"><div class="activity-dot"></div>Scientific Awareness Camp</div>
+          <div class="activity-item"><div class="activity-dot"></div>Field Research</div>
+          <div class="activity-item"><div class="activity-dot"></div>Project Preparation</div>
+          <div class="activity-item"><div class="activity-dot"></div>Model Demonstration</div>
+          <div class="activity-item"><div class="activity-dot"></div>Gandhigram Symposium</div>
+          <div class="activity-item"><div class="activity-dot"></div>ISRO &amp; IIST Visit</div>
+          <div class="activity-item"><div class="activity-dot"></div>Conference Participation</div>
+        </div>
+      </div>
+    </div>
+    <div class="origin-body">
+      <p>In 2017, I was a school student in Nagercoil with little more than a vague sense that nature was worth preserving. My parents enrolled me in the <strong>Kumari Arivial Peravai (KAP) Young Scientists Programme</strong> — a rigorous, year-long environmental science initiative affiliated with CSIR and the MHRD, Government of India. I did not choose it. I was not yet someone who would have chosen it.</p>
+      <p>What the programme gave me was not simply knowledge — it gave me <strong>proximity to consequence</strong>. Standing at the edge of a coastal estuary, counting mangrove saplings in a deteriorating habitat, I encountered for the first time the gap between environmental data and political will. The ecosystems I was documenting were degrading not because no one cared, but because no one was measuring — and because those who were measuring had no pathway to those who could act.</p>
+      <p>Selected from over <strong>500 students</strong> and evaluated by a six-member panel of scientists, I was ultimately honoured with the <strong>Young Scientist Award at the Gandhigram Rural Institute Deemed University Symposium</strong> (MHRD-funded, Government of India) in May 2018. But the award was secondary to what the programme had done to my understanding of the world.</p>
+      <p>I authored the chapter <strong>"Channels and Rivers in Kanyakumari District"</strong> in the programme's published book, <em>Rescue the Planet Earth</em> — documenting local freshwater ecosystems and waterway geography. This chapter directly informed a subsequent <strong>community-led channel restoration project</strong> in Kanyakumari. For the first time, I had seen how evidence, carefully gathered and clearly communicated, could translate into community action.</p>
+      <p>The following year, I returned — not as a participant, but as a <strong>Students' Guide and Team Supporter</strong> for the next cohort under the theme "Land and Life." I mentored junior participants through tree plantation, water body studies, and innovative project design. I was eighteen. I was already teaching what I had learned.</p>
+      <p>That cycle — <strong>field observation to evidence to governance to action to mentorship</strong> — became the intellectual and moral template for everything I have built since.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="section-sep">
+
+<!-- ═══════════════ 02 — SUSTAINABILITY JOURNEY ═══════════════ -->
+<section class="page-section" id="journey">
+  <div class="section-eyebrow">
+    <span class="eyebrow-num">02</span>
+    <span class="eyebrow-text">The Sustainability Journey</span>
+  </div>
+  <div class="section-rule"></div>
+  <h2 class="section-title">A progression shaped by<br><em>consistent, deliberate commitment.</em></h2>
+  <p class="section-lead">Every stage of this journey follows a recognisable logic — the same questions, deepening tools, widening scope. This is not a pivot. It is a development.</p>
+
+  <div class="transform-timeline">
+    <div class="transform-line"></div>
+    <div class="transform-item">
+      <div class="transform-dot"></div>
+      <div class="transform-year-col"><div class="transform-year">2017</div></div>
+      <div class="transform-content">
+        <h3>Environmental Awakening — KAP Young Scientists Programme</h3>
+        <p>First direct encounter with environmental degradation through field research in Kanyakumari district. Coastal surveys, biodiversity walks, and water body studies transformed abstract concern into evidence-based commitment. Selected from 500+ students, evaluated by a six-member scientist panel.</p>
+        <div class="significance">Foundation: The gap between environmental evidence and governance action became the central problem I have spent years trying to close.</div>
+      </div>
+    </div>
+    <div class="transform-item">
+      <div class="transform-dot"></div>
+      <div class="transform-year-col"><div class="transform-year">2018</div></div>
+      <div class="transform-content">
+        <h3>Young Scientist Award &amp; Published Book Contribution</h3>
+        <p>Recognised at the Gandhigram Rural Institute Symposium (MHRD-funded, Govt. of India). Authored "Channels and Rivers in Kanyakumari District" for KAP's published book — a contribution that directly informed a community-led restoration project. First experience of research translating into real-world action.</p>
+        <div class="significance">Lesson: Evidence communicated clearly can move communities. Communication is not separate from science — it is its instrument.</div>
+      </div>
+    </div>
+    <div class="transform-item">
+      <div class="transform-dot"></div>
+      <div class="transform-year-col"><div class="transform-year">2018</div></div>
+      <div class="transform-content">
+        <h3>Students' Guide — Mentoring the Next Cohort</h3>
+        <p>Returned to KAP as a Students' Guide for the "Land and Life" cohort — facilitating junior participants through nature protection, tree plantation, and scientific project development. Early leadership in environmental education and peer mentorship.</p>
+        <div class="significance">Lesson: Sustainability requires generational continuity. Mentorship is an environmental act.</div>
+      </div>
+    </div>
+    <div class="transform-item">
+      <div class="transform-dot"></div>
+      <div class="transform-year-col"><div class="transform-year">2021</div></div>
+      <div class="transform-content">
+        <h3>StartupTN SHE Bootcamp — "Idea to MVP"</h3>
+        <p>Recognised by Tamil Nadu's flagship women-in-entrepreneurship programme for developing a viable business model and MVP. First formal engagement with systems thinking, product design, and social innovation — skills that would later shape sustainability tool development.</p>
+        <div class="significance">Pivot point: Technology and governance are not separate from sustainability — they are its delivery mechanisms.</div>
+      </div>
+    </div>
+    <div class="transform-item">
+      <div class="transform-dot"></div>
+      <div class="transform-year-col"><div class="transform-year">2022</div></div>
+      <div class="transform-content">
+        <h3>B.Tech AI &amp; Data Science — Arunachala College of Engineering</h3>
+        <p>Deliberately chose AI &amp; Data Science as an undergraduate discipline — not for job market reasons, but because environmental governance requires data fluency. GPA 8.43/10. Coursework in data science, complex systems, and environmental modelling reinforced the connection between computational methods and sustainability challenges.</p>
+        <div class="significance">Strategic decision: To close the governance-data gap identified in 2017, I needed to understand both sides of it.</div>
+      </div>
+    </div>
+    <div class="transform-item">
+      <div class="transform-dot"></div>
+      <div class="transform-year-col"><div class="transform-year">2022–23</div></div>
+      <div class="transform-content">
+        <h3>Government of India Master Trainer — Nasha Mukt Bharat Abhiyaan</h3>
+        <p>55-hour Ministry of Social Justice certified programme. Trained as Master Trainer for community-level drug awareness and social welfare advocacy. Demonstrated capacity to operate within government frameworks and engage communities on sensitive public health issues.</p>
+        <div class="significance">Governance experience: Working within government systems, understanding how policy translates to community-level implementation.</div>
+      </div>
+    </div>
+    <div class="transform-item">
+      <div class="transform-dot"></div>
+      <div class="transform-year-col"><div class="transform-year">2025</div></div>
+      <div class="transform-content">
+        <h3>Patent Filed & Published — HELIO-CASE (Application No. 202541040849)</h3>
+        <p>Filed and officially published (U/S 11A, IP India) — a sun-powered charging device with heat-resistant protection. First formal intellectual property contribution in sustainable technology. Demonstrates capacity to move from conceptual thinking to patentable innovation in the renewable energy space.</p>
+        <div class="significance">Innovation: Sustainability requires not only analysing systems but redesigning them.</div>
+      </div>
+    </div>
+    <div class="transform-item">
+      <div class="transform-dot"></div>
+      <div class="transform-year-col"><div class="transform-year">Jan 2025</div></div>
+      <div class="transform-content">
+        <h3>Junior Developer — SBros Tech Pvt. Ltd., India &amp; Singapore</h3>
+        <p>Enterprise ERP systems, AI-powered institutional tools, and client-facing platforms for organisations across India and Singapore. Cross-cultural stakeholder engagement, systems thinking, and governance-aware digital transformation at organisational scale.</p>
+        <div class="significance">International exposure: Client delivery across cultural and regulatory contexts — directly relevant to multilateral institutional work.</div>
+      </div>
+    </div>
+    <div class="transform-item">
+      <div class="transform-dot"></div>
+      <div class="transform-year-col"><div class="transform-year">2026</div></div>
+      <div class="transform-content">
+        <h3>Research Publication · Eco Score · ESG Ranking · UNDP Certification</h3>
+        <p>Peer-reviewed paper in IJACECT (Vol. 15, ISSN 2278-5140). Two live sustainability platforms publicly deployed. UNDP Climate Promise certified — 5 modules, National Voluntary Carbon Footprint Programmes. Graduating June 2026 with GPA 8.43.</p>
+        <div class="significance">Convergence: Academic research, applied tools, international certification, and professional experience — arriving at the same point simultaneously.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-sep">
+
+<!-- ═══════════════ 03 — RESEARCH PHILOSOPHY ═══════════════ -->
+<section class="page-section" id="philosophy">
+  <div class="section-eyebrow">
+    <span class="eyebrow-num">03</span>
+    <span class="eyebrow-text">Research Philosophy</span>
+  </div>
+  <div class="section-rule"></div>
+  <h2 class="section-title">Research as an instrument<br>of <em>governance and equity.</em></h2>
+
+  <div class="philosophy-grid">
+    <div class="philosophy-body">
+      <p>My approach to research is shaped by a conviction formed in 2017 and refined over nearly a decade: <strong>environmental science that does not inform governance is incomplete.</strong> The field surveys I conducted as a sixteen-year-old documented degrading ecosystems in precise detail. The ecosystems continued to degrade. The problem was never insufficient data — it was insufficient translation from evidence to action.</p>
+      <p>This conviction has guided every research decision I have made since. My published paper on AI-based cognitive and emotional monitoring is not a computer science paper that happens to mention social welfare — it is a public health paper that uses machine learning as its instrument. The question it asks is fundamentally a governance question: <strong>how can underserved communities access mental health support at scale?</strong></p>
+      <p>Similarly, my patent for HELIO-CASE did not begin with a technology solution looking for a problem. It began with the observation that environmental monitoring equipment — the kind used in field research — is power-dependent in ways that exclude the most climate-vulnerable communities from the data generation process. The invention is a response to an equity gap.</p>
+      <p>My sustainability platforms — Eco Score and ESG Ranking — reflect the same principle. Carbon footprint calculators exist in abundance. <strong>India-specific carbon calculators, calibrated to India's National Determined Contributions and aligned with behavioural science literature on climate communication, do not.</strong> I built what was missing, not what was popular.</p>
+      <p>If I were to articulate a research philosophy in a single sentence: I am interested in the space between what we measure and what we govern — and specifically in building the tools, frameworks, and institutional capacities that close that gap.</p>
+    </div>
+    <div class="philosophy-pillars">
+      <div class="pillar-card">
+        <div class="pillar-num">01</div>
+        <h4>Evidence → Governance Translation</h4>
+        <p>Research is most valuable when it narrows the distance between scientific evidence and policy action. Every project I undertake asks: who needs this data, and how will they use it?</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-num">02</div>
+        <h4>Equity-Centred Design</h4>
+        <p>Sustainability tools that work only in high-resource environments perpetuate the inequities that cause environmental degradation. I design for the communities most affected, not most affluent.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-num">03</div>
+        <h4>Interdisciplinary Rigour</h4>
+        <p>Climate governance requires fluency in ecology, data science, policy analysis, and behavioural science simultaneously. I am deliberately building competence across all four.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-num">04</div>
+        <h4>Local Knowledge, Global Frameworks</h4>
+        <p>The data gap in South Asian sustainability governance is not just technical — it is contextual. Global frameworks must be translated into local realities. I am positioned to do both.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-sep">
+
+<!-- ═══════════════ 04 — PUBLICATIONS & PATENT ═══════════════ -->
+<section class="page-section" id="publications">
+  <div class="section-eyebrow">
+    <span class="eyebrow-num">04</span>
+    <span class="eyebrow-text">Research &amp; Intellectual Property</span>
+  </div>
+  <div class="section-rule"></div>
+  <h2 class="section-title">Original contributions to<br><em>science and innovation.</em></h2>
+  <p class="section-lead">Two formal intellectual contributions produced alongside full-time undergraduate studies and professional employment — demonstrating independent research capacity and applied innovation in sustainability technology.</p>
+
+  <div class="research-item">
+    <div class="research-item-header">
+      <div class="research-item-type">📄 Peer-Reviewed Journal Publication · Open Access</div>
+      <div class="research-item-title">AI-Based Cognitive and Emotional Monitoring System</div>
+      <div class="research-item-meta">IJACECT · Vol. 15, Issue 01 · 2026 · ISSN 2278-5140 · MRI India · CC BY-NC-ND</div>
+    </div>
+    <div class="research-item-body">
+      <p>This paper investigates the application of artificial intelligence to cognitive and emotional state monitoring, with a focus on improving access to mental health support in underserved populations. The research bridges human-computer interaction, affective computing, and public health equity — examining how AI-enabled emotion detection and crisis identification can serve communities where mental health professionals are scarce or inaccessible.</p>
+      <p>The work reflects a core methodological commitment: <strong>AI should be evaluated not only on its technical performance, but on its capacity to reduce structural inequity.</strong> In the context of climate governance, this principle has direct application — climate-affected populations, particularly in the Global South, face disproportionate mental health burdens that existing monitoring and support systems fail to capture.</p>
+      <div class="research-contribution">
+        <div class="research-contribution-label">Specific Contribution &amp; Significance</div>
+        <p>This paper demonstrates capacity for independent, peer-reviewed research produced under demanding conditions — full-time undergraduate study and concurrent professional employment. It also establishes methodological fluency in human-centred AI, a growing requirement in international development and public health governance contexts.</p>
+      </div>
+      <div class="research-tags">
+        <span class="r-tag">Human-Centred AI</span>
+        <span class="r-tag">Mental Health Equity</span>
+        <span class="r-tag">Affective Computing</span>
+        <span class="r-tag">Public Health Governance</span>
+        <span class="r-tag">Social Welfare</span>
+        <span class="r-tag">Open Access</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="research-item">
+    <div class="research-item-header">
+      <div class="research-item-type">🔬 Patent Filed & Published (U/S 11A) · Govt. of India · 2025</div>
+      <div class="research-item-title">HELIO-CASE: Sun-Powered Charging with Heat-Resistant Protection</div>
+      <div class="research-item-meta">Application No. 202541040849 · Filed: 28 April 2025 · Published: 30 May 2025 · IP India (U/S 11A)</div>
+    </div>
+    <div class="research-item-body">
+      <p>HELIO-CASE addresses a practical barrier in environmental monitoring and sustainability data collection: the power dependency of field equipment in climate-vulnerable, off-grid communities. The device integrates sun-powered energy harvesting with thermal management and heat-resistant protection — enabling durable, climate-resilient deployment of monitoring hardware in remote and resource-constrained environments where conventional power infrastructure is absent or unreliable.</p>
+      <p>Filed on 28 April 2025 and <strong>officially published under Section 11A of the Patents Act by IP India on 30 May 2025</strong> — the patent has cleared the publication stage and is now publicly verifiable on the IP India portal (Application No. 202541040849). Publication under S.11A means the invention has been formally disclosed to the public and is no longer merely "applied for" — it is on record with the Government of India as a substantive intellectual property contribution.</p>
+      <p>The motivation is explicitly environmental governance-oriented. <strong>The communities most affected by climate change are frequently those with the least capacity to generate the environmental data that informs the policies designed to protect them.</strong> HELIO-CASE is a partial response to this structural asymmetry — enabling data collection where it is most needed, without dependence on grid electricity that many climate-vulnerable regions lack.</p>
+      <div class="research-contribution">
+        <div class="research-contribution-label">Specific Contribution &amp; Significance for Erasmus Committees</div>
+        <p>A patent filed and published at undergraduate level — in the Electrical/Renewable Energy field — is a verifiable, government-recorded intellectual property contribution that most graduate applicants cannot demonstrate. It shows the capacity to move from problem identification (equity gap in environmental data infrastructure) to engineering design to formal IP, and directly addresses SDG 7 (Affordable and Clean Energy) and SDG 13 (Climate Action). Committees can independently verify this on ipindia.gov.in using Application No. 202541040849.</p>
+      </div>
+      <div class="research-tags">
+        <span class="r-tag">Renewable Energy</span>
+        <span class="r-tag">Thermal Management</span>
+        <span class="r-tag">Environmental Monitoring</span>
+        <span class="r-tag">Climate Equity</span>
+        <span class="r-tag">SDG 7</span>
+        <span class="r-tag">Off-Grid Technology</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="research-item">
+    <div class="research-item-header">
+      <div class="research-item-type">📚 Published Book Contribution · 2018</div>
+      <div class="research-item-title">"Channels and Rivers in Kanyakumari District" — in <em>Rescue the Planet Earth</em></div>
+      <div class="research-item-meta">Kumari Arivial Peravai (KAP) · CSIR &amp; MHRD Affiliated Publication · 2018</div>
+    </div>
+    <div class="research-item-body">
+      <p>At sixteen, I authored a chapter documenting the freshwater ecosystems and waterway geography of Kanyakumari district — drawing on field surveys, water body studies, and ecological observation conducted as part of the KAP Young Scientists Programme. The chapter catalogued channel health, identified degradation patterns, and described local hydrological relationships.</p>
+      <p>The significance of this work is not merely academic. <strong>The documentation directly informed a community-led channel restoration project in Kanyakumari</strong> — demonstrating, at the earliest stage of my research career, the pathway from scientific observation to community action that has defined my approach ever since.</p>
+      <div class="research-contribution">
+        <div class="research-contribution-label">Why This Matters for Erasmus Committees</div>
+        <p>A published contribution to environmental science at age sixteen — eight years before this application — is among the strongest possible signals of long-term, authentic commitment to sustainability. This is not a candidate who discovered environmental governance in a gap year. The roots are documented, verifiable, and a decade deep.</p>
+      </div>
+      <div class="research-tags">
+        <span class="r-tag">Freshwater Ecosystems</span>
+        <span class="r-tag">Hydrological Mapping</span>
+        <span class="r-tag">Community Conservation</span>
+        <span class="r-tag">Environmental Documentation</span>
+        <span class="r-tag">Kanyakumari District</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-sep">
+
+<!-- ═══════════════ 05 — SUSTAINABILITY PROJECTS ═══════════════ -->
+<section class="page-section" id="projects">
+  <div class="section-eyebrow">
+    <span class="eyebrow-num">05</span>
+    <span class="eyebrow-text">Sustainability Projects</span>
+  </div>
+  <div class="section-rule"></div>
+  <h2 class="section-title">Not prototypes. Not exercises.<br><em>Deployed tools addressing real governance gaps.</em></h2>
+  <p class="section-lead">Both platforms are publicly accessible, technically substantive, and address documented deficiencies in South Asian sustainability data infrastructure. They are presented here not as coding exercises, but as applied contributions to climate accountability and ESG governance.</p>
+
+  <!-- PROJECT 01 — ECO SCORE -->
+  <div class="project-block">
+    <div class="project-left">
+      <div class="project-left-num">01</div>
+      <h3>EcoScore</h3>
+      <div style="font-size:0.8rem;color:var(--muted);margin-bottom:0.75rem;font-style:italic">India Carbon Footprint Calculator</div>
+      <div class="url">🔗 eco-score-carbon-calculator.vercel.app</div>
+      <div class="url" style="margin-top:0.25rem">⚙️ github.com/barishavm29-ui/ecoscore-carbon-calculator</div>
+      <div style="margin-top:1.25rem;font-size:0.72rem;color:var(--muted);margin-bottom:0.5rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em">Tech Stack</div>
+      <div class="stack">
+        <span class="stack-tag">Python 3.11</span>
+        <span class="stack-tag">Flask</span>
+        <span class="stack-tag">Pandas</span>
+        <span class="stack-tag">Scikit-learn</span>
+        <span class="stack-tag">Plotly</span>
+        <span class="stack-tag">Vercel</span>
+      </div>
+      <div style="margin-top:1.25rem;font-size:0.72rem;color:var(--muted);margin-bottom:0.5rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em">Data Sources</div>
+      <div class="stack">
+        <span class="stack-tag">2023 IPCC Emission Factors</span>
+        <span class="stack-tag">India Grid Data</span>
+        <span class="stack-tag">NDC Benchmarks</span>
+      </div>
+      <div style="margin-top:1.25rem;font-size:0.72rem;color:var(--muted);margin-bottom:0.5rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em">SDGs</div>
+      <div class="sdg-list">
+        <div class="sdg-line">SDG 13 — Climate Action</div>
+        <div class="sdg-line">SDG 12 — Responsible Consumption</div>
+        <div class="sdg-line">SDG 11 — Sustainable Cities</div>
+      </div>
+    </div>
+    <div class="project-right">
+      <p><strong>The governance gap this addresses:</strong> India has committed to ambitious Nationally Determined Contributions under the Paris Agreement — a 2-ton-per-person carbon budget by 2030. Yet no publicly accessible, India-calibrated tool existed to translate this national commitment into individual accountability. Generic Western calculators use US or European emission factors, misrepresenting India's electricity grid (predominantly coal), dietary norms, and transport infrastructure, producing misleading results for Indian users.</p>
+      <p>EcoScore fills this gap through a four-step assessment covering transport, electricity consumption, diet, and aviation. It uses <strong>2023 IPCC emission factors applied to India-specific grid data</strong>, compares the user's footprint against both the Indian average (1.9 tons/year) and global average (4.0 tons/year), and identifies which behaviour is contributing most to the user's total emissions.</p>
+      <p>The recommendations engine moves beyond generic advice. Rather than "plant trees," it produces specific, quantified suggestions based on the user's individual data — for example: "switching to bus transport three days per week saves 0.8 tons annually." This behavioural specificity reflects the climate communication literature, which consistently shows that personalised, quantified recommendations outperform generic messaging in driving behaviour change.</p>
+      <p>A gamified badge system — including "Paris Achiever" for users below the 2-ton target — applies positive reinforcement design principles to climate literacy. The <strong>Paris Agreement target of 2 tons per person by 2030 is made concrete, measurable, and personally relevant</strong> for every user who completes the assessment.</p>
+      <div class="project-significance">
+        <div class="project-significance-label">What this demonstrates for Erasmus Committees</div>
+        <p>This is not a student who writes essays about caring for the environment. This is a student who identified a specific data gap in India's climate accountability infrastructure, understood its policy context (NDC commitments, Paris targets), and built a publicly deployed tool to address it. The combination of policy literacy, technical execution, and behavioural science application is precisely the interdisciplinary competence that MESPOM and CCD-STeDe programmes seek to develop.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECT 02 — ESG RANKING -->
+  <div class="project-block">
+    <div class="project-left">
+      <div class="project-left-num">02</div>
+      <h3>ESG Ranking Platform</h3>
+      <div style="font-size:0.8rem;color:var(--muted);margin-bottom:0.75rem;font-style:italic">Corporate Sustainability Tracker — India</div>
+      <div class="url">🔗 esg-ranking-v2.vercel.app</div>
+      <div class="url" style="margin-top:0.25rem">⚙️ github.com/barishavm29-ui/ESG-Ranking</div>
+      <div style="margin-top:1.25rem;font-size:0.72rem;color:var(--muted);margin-bottom:0.5rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em">Tech Stack</div>
+      <div class="stack">
+        <span class="stack-tag">Python 3.12</span>
+        <span class="stack-tag">Flask</span>
+        <span class="stack-tag">Pandas</span>
+        <span class="stack-tag">Scikit-learn (Linear Regression)</span>
+        <span class="stack-tag">Plotly</span>
+        <span class="stack-tag">Vercel Serverless</span>
+      </div>
+      <div style="margin-top:1.25rem;font-size:0.72rem;color:var(--muted);margin-bottom:0.5rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em">Companies Tracked</div>
+      <div style="font-size:0.78rem;color:#4B5563;line-height:1.7">TCS · Infosys · Wipro · HCL Tech · HDFC Bank · ICICI Bank · Bharti Airtel · Reliance Industries · ITC · Larsen &amp; Toubro<br><span style="color:var(--muted);font-size:0.72rem">4 years of ESG data (2022–2025) per company</span></div>
+      <div style="margin-top:1.25rem;font-size:0.72rem;color:var(--muted);margin-bottom:0.5rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em">SDGs</div>
+      <div class="sdg-list">
+        <div class="sdg-line">SDG 17 — Partnerships for Goals</div>
+        <div class="sdg-line">SDG 16 — Strong Institutions</div>
+        <div class="sdg-line">SDG 8 — Decent Work &amp; Growth</div>
+      </div>
+    </div>
+    <div class="project-right">
+      <p><strong>The governance gap this addresses:</strong> ESG reporting is increasingly central to global sustainability governance — yet South Asian implementation remains opaque. Most ESG ratings are locked behind commercial paywalls (MSCI, Sustainalytics). SEBI's Business Responsibility and Sustainability Reporting (BRSR) mandate is relatively recent, and compliance data is scattered across company annual reports that require significant expertise to interpret. Civil society actors, researchers, and smaller investors have no practical tool for comparative analysis.</p>
+      <p>The platform tracks 10 major Indian corporations across a weighted ESG composite — Environmental (33%), Social (33%), Governance (34%) — with letter grades from A+ to C. Four years of historical data (2022–2025) enables trend analysis, not just snapshot comparison. Users can search and filter by industry, compare two or three companies simultaneously with overlay trend charts and radar visualisations, and view how each company performs against its <strong>industry benchmark average</strong> — a feature that provides regulatory context that raw scores alone cannot.</p>
+      <p>A machine learning layer uses Linear Regression fitted to each company's four-year score history to project performance one year forward. Accuracy across tested companies is 85–95% R² — appropriate for a domain where change is gradual and structurally driven, and where sudden discontinuities (scandal, major policy shift) are explicitly noted as a limitation. <strong>The model also classifies each company as "improving" or "declining" with a confidence score</strong> — a governance signal for investors and civil society actors monitoring corporate accountability trajectories.</p>
+      <p>The data itself required manual compilation from company annual reports — a deliberate choice given commercial data paywalls. This process deepened my understanding of how Indian corporations self-report sustainability performance, where disclosure gaps are systematically concentrated (small-cap companies, Social category), and how BRSR compliance varies across sectors. <strong>This is the kind of hands-on policy data literacy that no coursework alone provides.</strong></p>
+      <div class="project-significance">
+        <div class="project-significance-label">What this demonstrates for Erasmus Committees</div>
+        <p>This project sits at the precise intersection of ESG policy frameworks (GRI, TCFD, SEBI BRSR), data science (ML prediction, visualisation), and civil society accountability. It required understanding both the technical infrastructure of corporate sustainability reporting and the governance ecosystem in which that reporting operates. MUNDUS MAPP and MERGED committees evaluating candidates for policy-technical hybrid roles will recognise this combination as directly applicable.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECTS — METHODOLOGICAL NOTE -->
+  <div style="background:var(--warm);border:1px solid var(--border);border-radius:10px;padding:2rem 2.5rem;margin-top:1rem">
+    <div style="font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:0.75rem">A Note on Methodology</div>
+    <p style="font-size:0.88rem;color:#374151;line-height:1.85">Both projects were built with deliberate technical constraints that reflect governance realities. EcoScore uses CSV-based data storage — not because I could not build a database, but because the tool needs to be maintainable and auditable by non-technical sustainability officers who may eventually inherit it. ESG Ranking uses serverless deployment because regulatory context in India may require rapid updates as SEBI's BRSR requirements evolve, and a serverless architecture reduces the operational burden of keeping the tool current. <strong>Technical decisions in sustainability tools are governance decisions.</strong> I made them with that understanding.</p>
+  </div>
+</section>
+
+<hr class="section-sep">
+
+<!-- ═══════════════ 06 — ENVIRONMENTAL LEADERSHIP ═══════════════ -->
+<section class="page-section" id="leadership">
+  <div class="section-eyebrow">
+    <span class="eyebrow-num">06</span>
+    <span class="eyebrow-text">Environmental Leadership &amp; Recognition</span>
+  </div>
+  <div class="section-rule"></div>
+  <h2 class="section-title">Leadership earned through<br><em>consistency over time.</em></h2>
+  <p class="section-lead">These roles and recognitions are not listed mechanically. Each represents a specific moment in a continuous commitment — and each contributed something distinct to the sustainability practitioner I am becoming.</p>
+
+  <div class="leadership-grid">
+    <div class="leadership-item">
+      <div class="leadership-item-year">May 2018 · CSIR &amp; MHRD Affiliated</div>
+      <h3>Young Scientist Award</h3>
+      <div class="org">Kumari Arivial Peravai · Gandhigram Rural Institute Deemed University</div>
+      <p>Selected from over 500 students and evaluated by a six-member panel of scientists. Presented research at an MHRD-funded national symposium. Awarded for outstanding contribution to the "Rescue the Planet Earth" programme — including field research, published book chapter, and scientific presentation at Gandhigram Rural Institute Deemed University on 19 May 2018.</p>
+      <div class="relevance">Significance: Demonstrates scientific recognition at national level during secondary schooling — eight years before this Erasmus application.</div>
+    </div>
+    <div class="leadership-item">
+      <div class="leadership-item-year">Jul–Oct 2018 · KAP</div>
+      <h3>Students' Guide &amp; Team Supporter</h3>
+      <div class="org">Kumari Arivial Peravai — "Land and Life" Cohort</div>
+      <p>Invited to mentor the subsequent Young Scientist cohort immediately following my own award. Facilitated junior participants through nature protection, tree plantation, water body studies, and innovative project sessions. Demonstrated early environmental leadership and the capacity to translate personal learning into peer education.</p>
+      <div class="relevance">Significance: Leadership that was offered, not sought — the organisation trusted an eighteen-year-old to shape the next generation of environmental scientists.</div>
+    </div>
+    <div class="leadership-item">
+      <div class="leadership-item-year">Nov 2021 · Govt. of Tamil Nadu</div>
+      <h3>StartupTN SHE Bootcamp — Idea to MVP</h3>
+      <div class="org">StartupTN Regional Hub · Kanniyakumari District Administration</div>
+      <p>Recognised by Tamil Nadu's flagship women-in-technology entrepreneurship initiative for developing a viable business model and minimum viable product. Engagement with systems thinking, social innovation design, and entrepreneurial development — skills that would directly shape the Eco Score and ESG Ranking platforms.</p>
+      <div class="relevance">Significance: Early signal of the transition from environmental awareness to environmental solutions — from observation to intervention.</div>
+    </div>
+    <div class="leadership-item">
+      <div class="leadership-item-year">Nov 2022 – Jun 2023 · Govt. of India</div>
+      <h3>Master Trainer — Nasha Mukt Bharat Abhiyaan</h3>
+      <div class="org">Ministry of Social Justice &amp; Empowerment · Holy Cross College, Nagercoil</div>
+      <p>55-hour Government of India certified programme. Qualified as Master Trainer for community drug awareness and social welfare advocacy. Certified by the Social Welfare Officer, Kanyakumari District. Demonstrated capacity to work within government institutional frameworks, engage communities on complex public health issues, and train other practitioners.</p>
+      <div class="relevance">Significance: Governance literacy at community level — operating within government policy frameworks and translating them into community action. Directly relevant to international development practice.</div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-sep">
+
+<!-- ═══════════════ 07 — PROGRAMME ALIGNMENT ═══════════════ -->
+<section class="page-section" id="programmes">
+  <div class="section-eyebrow">
+    <span class="eyebrow-num">07</span>
+    <span class="eyebrow-text">Programme Alignment</span>
+  </div>
+  <div class="section-rule"></div>
+  <h2 class="section-title">Why these programmes,<br><em>and why this candidate.</em></h2>
+  <p class="section-lead">I have not applied to Erasmus Mundus programmes because they are prestigious. I have applied to these specific programmes because their interdisciplinary architecture mirrors the exact junction where my work already sits.</p>
+
+  <div class="programme-grid">
+    <div class="prog-card">
+      <div class="prog-name">MESPOM</div>
+      <div class="prog-full">Master of Science in Environmental Sciences, Policy and Management</div>
+      <div class="prog-match">
+        <div class="prog-match-item">Environmental field research background matches science foundation</div>
+        <div class="prog-match-item">Sustainability analytics and ESG platforms align with policy track</div>
+        <div class="prog-match-item">AI tools for environmental monitoring directly applicable</div>
+        <div class="prog-match-item">India NDC context adds Global South perspective to cohort</div>
+      </div>
+    </div>
+    <div class="prog-card">
+      <div class="prog-name">NOHA</div>
+      <div class="prog-full">Network on Humanitarian Action — Master in International Humanitarian Action</div>
+      <div class="prog-match">
+        <div class="prog-match-item">Community engagement experience (GOI Master Trainer, KAP mentorship)</div>
+        <div class="prog-match-item">Cross-cultural stakeholder work across India and Singapore</div>
+        <div class="prog-match-item">Climate vulnerability research connects to humanitarian risk</div>
+        <div class="prog-match-item">Public health equity focus in AI paper maps to humanitarian tech</div>
+      </div>
+    </div>
+    <div class="prog-card">
+      <div class="prog-name">MUNDUS MAPP</div>
+      <div class="prog-full">Master in Public Policy</div>
+      <div class="prog-match">
+        <div class="prog-match-item">ESG platform demonstrates policy analysis capacity</div>
+        <div class="prog-match-item">GOI programme experience provides governance fluency</div>
+        <div class="prog-match-item">Carbon calculator aligned with India's national climate policy</div>
+        <div class="prog-match-item">Data-to-policy translation is a core research commitment</div>
+      </div>
+    </div>
+    <div class="prog-card">
+      <div class="prog-name">MERGED</div>
+      <div class="prog-full">Master in Environmental Governance &amp; Regional Development</div>
+      <div class="prog-match">
+        <div class="prog-match-item">Freshwater ecosystem research (KAP book chapter)</div>
+        <div class="prog-match-item">Community-level field research across Kanyakumari district</div>
+        <div class="prog-match-item">ESG governance platform as applied governance contribution</div>
+        <div class="prog-match-item">Regional development focus in south Tamil Nadu context</div>
+      </div>
+    </div>
+    <div class="prog-card">
+      <div class="prog-name">CCD-STeDe</div>
+      <div class="prog-full">Climate Change &amp; Sustainable Development</div>
+      <div class="prog-match">
+        <div class="prog-match-item">India-calibrated carbon footprint tool (Eco Score)</div>
+        <div class="prog-match-item">NDC alignment and climate accountability focus</div>
+        <div class="prog-match-item">UNDP Climate Promise certification (5 modules, 2026)</div>
+        <div class="prog-match-item">HELIO-CASE patent in renewable energy technology</div>
+      </div>
+    </div>
+    <div class="prog-card">
+      <div class="prog-name">TISE</div>
+      <div class="prog-full">Transition, Innovation and Sustainability Environments</div>
+      <div class="prog-match">
+        <div class="prog-match-item">StartupTN innovation track and MVP development</div>
+        <div class="prog-match-item">AI tools for sustainability transitions</div>
+        <div class="prog-match-item">Systems thinking from ERP and institutional AI work</div>
+        <div class="prog-match-item">Patent-filed innovation in sustainable technology</div>
+      </div>
+    </div>
+  </div>
+
+  <table class="alignment-table">
+    <thead>
+      <tr>
+        <th>My Background</th>
+        <th>Erasmus Programme Requirement</th>
+        <th>Evidence</th>
+        <th>Match</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Environmental Field Research</td>
+        <td>Grounding in environmental science methods</td>
+        <td>7 KAP field activities, published book chapter, coastal surveys 2017–18</td>
+        <td><span class="match-strong">✓ Strong</span></td>
+      </tr>
+      <tr>
+        <td>AI & Data Science (GPA 8.43)</td>
+        <td>Quantitative and analytical literacy</td>
+        <td>B.Tech AI & DS, Python/SQL, ML research paper, 2 deployed data platforms</td>
+        <td><span class="match-strong">✓ Strong</span></td>
+      </tr>
+      <tr>
+        <td>Sustainability Tools (Deployed)</td>
+        <td>Applied sustainability competence</td>
+        <td>Eco Score (live), ESG Ranking (live) — both publicly accessible</td>
+        <td><span class="match-strong">✓ Strong</span></td>
+      </tr>
+      <tr>
+        <td>Governance Experience</td>
+        <td>Policy &amp; institutional awareness</td>
+        <td>GOI Master Trainer, KAP institutional engagement, UNDP certified</td>
+        <td><span class="match-strong">✓ Strong</span></td>
+      </tr>
+      <tr>
+        <td>Research Publication + Patent</td>
+        <td>Independent research capacity</td>
+        <td>IJACECT 2026, Patent No. 202541040849 (Filed & Published), KAP book chapter</td>
+        <td><span class="match-strong">✓ Strong</span></td>
+      </tr>
+      <tr>
+        <td>International Exposure</td>
+        <td>Cross-cultural competence</td>
+        <td>Client delivery India & Singapore, English academic proficiency</td>
+        <td><span class="match-strong">✓ Emerging</span></td>
+      </tr>
+      <tr>
+        <td>Community Engagement</td>
+        <td>Stakeholder &amp; development orientation</td>
+        <td>KAP peer mentorship, GOI community training, StartupTN</td>
+        <td><span class="match-strong">✓ Strong</span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<hr class="section-sep">
+
+<!-- ═══════════════ 08 — CAREER VISION ═══════════════ -->
+<section class="page-section" id="vision">
+  <div class="section-eyebrow">
+    <span class="eyebrow-num">08</span>
+    <span class="eyebrow-text">Career Vision</span>
+  </div>
+  <div class="section-rule"></div>
+  <h2 class="section-title">A logical progression,<br><em>not a sudden aspiration.</em></h2>
+  <p class="section-lead">The trajectory below is not constructed for this application. It is a description of a path already substantially walked — and a clear account of where it leads.</p>
+
+  <div class="vision-flow">
+    <div class="vision-step">
+      <div class="vision-step-connector"><div class="vision-step-dot"></div><div class="vision-step-line"></div></div>
+      <div class="vision-step-content">
+        <div class="vision-step-label">2017–2018 · Foundation</div>
+        <div class="vision-step-title">Environmental Awareness &amp; Field Science</div>
+        <div class="vision-step-desc">KAP Young Scientists Programme — first encounter with the gap between environmental evidence and governance action. Recognition through Young Scientist Award and published book contribution.</div>
+      </div>
+    </div>
+    <div class="vision-step">
+      <div class="vision-step-connector"><div class="vision-step-dot"></div><div class="vision-step-line"></div></div>
+      <div class="vision-step-content">
+        <div class="vision-step-label">2022–2026 · Capability Building</div>
+        <div class="vision-step-title">AI &amp; Data Science for Sustainability</div>
+        <div class="vision-step-desc">Deliberate choice to build technical fluency in the tools that environmental governance most urgently lacks — data science, machine learning, systems modelling. GPA 8.43. Published research. Filed patent.</div>
+      </div>
+    </div>
+    <div class="vision-step">
+      <div class="vision-step-connector"><div class="vision-step-dot"></div><div class="vision-step-line"></div></div>
+      <div class="vision-step-content">
+        <div class="vision-step-label">2025–2026 · Applied Impact</div>
+        <div class="vision-step-title">Sustainability Tools &amp; Innovation</div>
+        <div class="vision-step-desc">Eco Score and ESG Ranking — deployed, publicly accessible platforms addressing specific data gaps in South Asian climate accountability. HELIO-CASE patent addressing equity gaps in environmental monitoring infrastructure.</div>
+      </div>
+    </div>
+    <div class="vision-step">
+      <div class="vision-step-connector"><div class="vision-step-dot" style="background:var(--gold)"></div><div class="vision-step-line" style="background:linear-gradient(to bottom,var(--gold),rgba(201,168,76,0.2))"></div></div>
+      <div class="vision-step-content">
+        <div class="vision-step-label">2026–2028 · Current Goal</div>
+        <div class="vision-step-title">Erasmus Mundus — Environmental Governance &amp; Policy</div>
+        <div class="vision-step-desc">A Master's programme that provides the governance frameworks, international networks, and policy literacy needed to operate at the intersection of climate data, institutional design, and multilateral development. This is not a career change — it is the next stage of a decade-long preparation.</div>
+      </div>
+    </div>
+    <div class="vision-step">
+      <div class="vision-step-connector"><div class="vision-step-dot" style="background:rgba(27,67,50,0.4)"></div><div class="vision-step-line" style="background:rgba(27,67,50,0.15)"></div></div>
+      <div class="vision-step-content">
+        <div class="vision-step-label">2028–2033 · Medium-Term</div>
+        <div class="vision-step-title">Environmental Data &amp; Policy at Multilateral Scale</div>
+        <div class="vision-step-desc">Contribution to international organisations — UN Environment Programme, UNDP, World Bank climate programmes, or equivalent — in roles at the intersection of environmental data systems, governance capacity building, and climate policy. Specifically in the Global South, where the data deficit is most acute and the governance stakes are highest.</div>
+      </div>
+    </div>
+    <div class="vision-step">
+      <div class="vision-step-connector"><div class="vision-step-dot" style="background:rgba(27,67,50,0.25)"></div></div>
+      <div class="vision-step-content">
+        <div class="vision-step-label">Long-Term</div>
+        <div class="vision-step-title">Systems-Level Environmental Governance</div>
+        <div class="vision-step-desc">Shaping the institutional frameworks that determine how environmental data is collected, interpreted, and acted upon at national and international level. Building the bridges — between science and policy, between Global North frameworks and Global South realities, between communities and multilateral institutions — that the planetary crisis demands.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="vision-goal">
+    <div class="vision-goal-label">Long-Term Commitment</div>
+    <div class="vision-goal-text">"To work at the intersection of <em>environmental data, climate governance,</em> and international development — building the institutional capacities that translate scientific evidence into equitable and lasting policy action."</div>
+  </div>
+</section>
+
+<hr class="section-sep">
+
+<!-- ═══════════════ 09 — WHY ERASMUS MUNDUS ═══════════════ -->
+<section class="page-section" id="why">
+  <div class="section-eyebrow">
+    <span class="eyebrow-num">09</span>
+    <span class="eyebrow-text">Why Erasmus Mundus</span>
+  </div>
+  <div class="section-rule"></div>
+  <h2 class="section-title">A deliberate choice,<br><em>not a prestigious default.</em></h2>
+
+  <div class="why-grid">
+    <div class="why-body">
+      <p>I have been asked by well-meaning advisors why I am applying to Erasmus Mundus rather than a single-university master's programme. The answer is structural, not aspirational.</p>
+      <p><strong>The problems I want to work on do not respect national borders.</strong> Climate governance is inherently multilateral. ESG standards are globally contested. Environmental data systems are only as useful as the international frameworks that give them meaning. A master's programme that takes place in one country, through one institutional lens, is inadequate preparation for work that requires fluency in multiple regulatory traditions, policy cultures, and scientific communities simultaneously.</p>
+      <p>Erasmus Mundus programmes are not simply prestigious — they are architecturally suited to the kind of practitioner I need to become. The consortium model means that I will study climate policy in one European regulatory context, environmental governance in another, and sustainability transitions in a third. The peer cohort will include professionals from every continent directly affected by the challenges we are studying.</p>
+      <p>There is also a more personal reason. I grew up in Nagercoil, in the southernmost district of India — a place that is simultaneously one of the most biodiverse regions in the country and one of the most climate-vulnerable. <strong>The communities I want to serve are not in European capitals. They are in places like Kanyakumari, in the Maldives, in Bangladesh, in sub-Saharan Africa.</strong> The multilateral networks built through an Erasmus Mundus education are precisely those through which the interests of these communities are most effectively advanced.</p>
+      <p>I am applying for a fully funded scholarship because I cannot fund this education from within India at the level it requires — and because the funding model of Erasmus Mundus reflects a commitment to selecting candidates on merit and potential rather than financial privilege. I believe I meet that standard.</p>
+    </div>
+    <div class="why-reasons">
+      <div class="why-reason">
+        <div class="why-reason-num">01</div>
+        <h4>Interdisciplinary Architecture</h4>
+        <p>The problems I work on — climate governance, ESG policy, environmental data — require simultaneous fluency in science, policy, economics, and law. No single discipline is sufficient.</p>
+      </div>
+      <div class="why-reason">
+        <div class="why-reason-num">02</div>
+        <h4>Multilateral Networks</h4>
+        <p>The institutions I aspire to contribute to — UN system, World Bank, UNDP — operate through exactly the multilateral relationships that Erasmus consortium structures cultivate.</p>
+      </div>
+      <div class="why-reason">
+        <div class="why-reason-num">03</div>
+        <h4>Global South Representation</h4>
+        <p>Erasmus cohorts typically lack candidates with direct experience of environmental governance challenges in South Asia. I bring a perspective — and a network — that these programmes need as much as I need them.</p>
+      </div>
+      <div class="why-reason">
+        <div class="why-reason-num">04</div>
+        <h4>Merit-Based Access</h4>
+        <p>The fully funded scholarship model ensures that the best candidates are selected regardless of economic background. This reflects the values of equity and access that drive my work in sustainability.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-sep">
+
+<!-- ═══════════════ 10 — FUTURE RESEARCH ═══════════════ -->
+<section class="page-section" id="future">
+  <div class="section-eyebrow">
+    <span class="eyebrow-num">10</span>
+    <span class="eyebrow-text">Future Research Interests</span>
+  </div>
+  <div class="section-rule"></div>
+  <h2 class="section-title">Where I intend to<br><em>contribute next.</em></h2>
+  <p class="section-lead">These are not aspirations formulated for this application. They are the natural extensions of the research questions that have occupied me for the past several years.</p>
+
+  <div class="future-grid">
+    <div class="future-card">
+      <div class="future-icon">🌊</div>
+      <h4>Climate Vulnerability Indexing for South Asian Coastal Communities</h4>
+      <p>Building on the coastal ecosystem research begun in 2017, I want to develop data-driven vulnerability indices that translate environmental monitoring into policy-relevant risk assessments for Tamil Nadu and Kerala's coastal districts.</p>
+    </div>
+    <div class="future-card">
+      <div class="future-icon">📊</div>
+      <h4>ESG Governance in Emerging Markets</h4>
+      <p>Expanding the ESG Ranking Platform framework to address the specific disclosure gaps and regulatory contexts of emerging market economies — with particular focus on South and Southeast Asia, where ESG infrastructure is weakest and stakes are highest.</p>
+    </div>
+    <div class="future-card">
+      <div class="future-icon">🤖</div>
+      <h4>AI for Environmental Governance Capacity</h4>
+      <p>Exploring how machine learning can be applied not merely to environmental data analysis, but to governance process itself — including regulatory compliance monitoring, environmental impact assessment automation, and early warning systems for policy failure.</p>
+    </div>
+    <div class="future-card">
+      <div class="future-icon">💧</div>
+      <h4>Freshwater Ecosystem Governance in Climate Transition</h4>
+      <p>Returning to the freshwater systems documented in the 2018 KAP book chapter — now with the tools to analyse how climate transition affects governance frameworks for river and watershed management in peninsular India.</p>
+    </div>
+    <div class="future-card">
+      <div class="future-icon">⚖️</div>
+      <h4>Climate Justice &amp; NDC Implementation Equity</h4>
+      <p>Examining the distributional consequences of India's Nationally Determined Contribution implementation — specifically, which communities bear disproportionate burdens in the climate transition and what governance mechanisms can address this.</p>
+    </div>
+    <div class="future-card">
+      <div class="future-icon">🔋</div>
+      <h4>Off-Grid Environmental Monitoring Infrastructure</h4>
+      <p>Building on the HELIO-CASE patent — developing a research programme around the infrastructure conditions needed for climate-vulnerable communities to participate in environmental data generation on their own terms.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="section-sep">
+
+<!-- ═══════════════ 11 — GLOBAL IMPACT VISION ═══════════════ -->
+<section class="page-section" id="global">
+  <div class="section-eyebrow">
+    <span class="eyebrow-num">11</span>
+    <span class="eyebrow-text">Global Impact Vision</span>
+  </div>
+  <div class="section-rule"></div>
+  <h2 class="section-title">The world I am<br><em>working toward.</em></h2>
+
+  <div class="global-statement">"A world in which the communities most affected by climate change are also those with the greatest capacity to <em>shape the governance responses</em> that determine their futures."</div>
+
+  <div class="orgs-grid">
+    <div class="org-chip"><div class="org-chip-icon">🌐</div><h5>UN Environment</h5><p>Environmental governance and multilateral climate frameworks</p></div>
+    <div class="org-chip"><div class="org-chip-icon">🌱</div><h5>UNDP</h5><p>Development programming and climate adaptation</p></div>
+    <div class="org-chip"><div class="org-chip-icon">🏦</div><h5>World Bank</h5><p>Climate finance and sustainability data systems</p></div>
+    <div class="org-chip"><div class="org-chip-icon">🤝</div><h5>GIZ / WWF</h5><p>Conservation and development partnerships</p></div>
+    <div class="org-chip"><div class="org-chip-icon">📋</div><h5>IPCC / IPBES</h5><p>Contributing to the science-policy interface</p></div>
+    <div class="org-chip"><div class="org-chip-icon">🌿</div><h5>UNEP / UNFCCC</h5><p>Climate policy and environmental law</p></div>
+    <div class="org-chip"><div class="org-chip-icon">🔬</div><h5>Research &amp; Academia</h5><p>Advancing the evidence base for governance</p></div>
+    <div class="org-chip"><div class="org-chip-icon">💡</div><h5>Independent Practice</h5><p>Sustainability consulting and advisory</p></div>
+  </div>
+
+  <div class="closing-note">
+    <p>"I began this journey at sixteen, on the coast of Kanyakumari, counting mangrove saplings. That work mattered — a community-led restoration project followed. I have spent every year since building the technical, governance, and research capacities to work on problems of greater scale and consequence. The Erasmus Mundus scholarship is not the beginning of that commitment. It is its next chapter."</p>
+    <div class="closing-sig">
+      <strong>Barisha V M</strong> &nbsp;·&nbsp; barishavm29@gmail.com &nbsp;·&nbsp; +91 89035 41132 &nbsp;·&nbsp; Nagercoil, Tamil Nadu, India &nbsp;·&nbsp; github.com/barishavm29-ui
+    </div>
+  </div>
+</section>
+
+<script>
+// Scroll reveal
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; }});
+},{threshold:0.08});
+document.querySelectorAll('.research-item,.project-block,.leadership-item,.prog-card,.future-card,.org-chip,.pillar-card,.why-reason').forEach(el => {
+  el.style.opacity='0'; el.style.transform='translateY(18px)'; el.style.transition='opacity .6s ease, transform .6s ease';
+  obs.observe(el);
+});
+</script>
+</body>
+</html>
